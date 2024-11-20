@@ -8,9 +8,65 @@
     <script src="./scripts/IDs.js" ></script>
     <script src="./scripts/api.js" ></script>
     <script src="./scripts/search.js" defer></script>
+    <link rel="stylesheet" href="./movies.css" />
 </head>
 <body>
-    <h1>Movie API!!!</h1>
-    
+    <nav class="header">
+        <div class="header__title">Indecisive Movies Lovers</div>
+        <div class="header__control">
+          <a class="header__search" href="">Search</a>
+          <img class="header__image" src="" alt="profile-picture" />
+        </div>
+      </nav>
+  
+      <h1>Let's pick a movie for you !</h1>
+  
+      <section class="search__container">
+        <form class="search__form">
+          <div class="search__field">
+            <div class="search__input">
+              <label for="keywords">Keywords</label>
+              <input
+                name="keyword"
+                type="text"
+                id="keywords"
+                placeholder="Harry Pot|"
+              />
+            </div>
+  
+            <div class="search__filters">
+              <div class="search__genre">
+                <select name="genre" id="genre">
+                  <option value="">Genre</option>
+                  <option value="action">Action</option>
+                  <option value="romance">Romance</option>
+                  <option value="comedy">Comedy</option>
+                  <option value="horror">Horror</option>
+                </select>
+              </div>
+  
+              <div class="search__year">
+                <select name="year" id="year">
+                  <option value="">Year</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                </select>
+              </div>
+  
+              <div class="search__buttons"></div>
+              <button type="submit" class="search__button">Search</button>
+              <button type="button" class="search__random">
+                Find a random movie!
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+  
+      <section class="movies">  
+        <div class="popular__movies"></div>
+      </section>
 </body>
 </html>

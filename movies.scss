@@ -1,0 +1,49 @@
+@use "./partials/global" as *;
+@use "./partials/mixins" as *;
+
+.header {
+  background-color: #212529;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+  }
+
+  &__search {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+
+
+  &__form {
+    padding-bottom: 1rem;
+  }
+
+  &__field {
+    display: flex;
+  }
+
+  &__filters {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__button {
+    background-color: #0f6cbd;
+    color: #ffffff;
+  }
+
+  &__random {
+    background-color: #ffffff;
+  }
+}
