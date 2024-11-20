@@ -14,13 +14,22 @@ class Api {
     }
 }
 
-const api = new Api("3a38116e", "tt3896198");
+const moviesData = []
 
 
-async function fetchAndDisplayData() {
-    const data = await api.getApiData();
-    console.log(data);
+for (let i = 0; i < ids.length; i++){
+    const api = new Api("3a38116e", ids[i]);
+    
+    async function fetchData() {
+        
+        const data = await api.getApiData();
+
+        moviesData.push(data)
+    }
+    
+    fetchData()
 }
 
-fetchAndDisplayData()
+console.log(moviesData)
+
 
